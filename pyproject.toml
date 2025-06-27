@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "termtask"
+version = "0.0.2"
+authors = [
+  { name = "Michael Gill", email = "husingillchild@gmail.com" },
+]
+description = "A simple terminal based task manager for Linux systems."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Unix"
+]
+license = { file = "LICENSE" }
+dependencies = [ "click", "tomlkit" ]
+
+[project.scripts]
+todo = "termtask.__main__:main"
